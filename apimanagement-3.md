@@ -57,7 +57,7 @@ Wybierz `Star Wars API`, a następnie `All Operations`. W sekcji `Inbound proces
 
 ![CORS](Images/APIMSWCORS1.png)
 
-Select `CORS`
+Wybierz `CORS`
 
 ![CORS](Images/APIMCORS2.png)
 

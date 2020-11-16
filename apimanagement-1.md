@@ -17,7 +17,7 @@ Tworzenie instancji API Management zajmuje do godziny. Wykonajmy ten krok przed 
 
 ![Deploy blade](Images/APIMDeployBlade.png)
 
-Używając odpowiednich wartości naciśnij [Create] by utworzyć usługę.
+Używając odpowiednich wartości naciśnij **Create** by utworzyć usługę.
 
 - Nazwa instancji musi być unikalna.
 - Na potrzeby warsztatu używamy Developer Tier.
@@ -32,7 +32,7 @@ Po utworzeniu usługi uzyskasz dostęp do nastepujących elementów:
 
 Link do portalu developera można znaleźć w prawym górnym rogu zakładki Overview w Portalu.
 
-![](Images/APIMOverviewBlade.png)
+![Overview](Images/APIMOverviewBlade.png)
 
 ---
 

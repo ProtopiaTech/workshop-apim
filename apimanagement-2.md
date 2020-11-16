@@ -25,7 +25,7 @@ Zacznijmy od obejrzenia działania Developer Portalu w praktyce
 
 #### Dostęp anonimowy
 
-Jako niezalogowany użykownik (otworzenie adresu twojego Developer Portalu w przeglądarce) wyświetl listę dostępnych produktów.
+Jako niezalogowany użytkownik (otworzenie adresu twojego Developer Portalu w przeglądarce) wyświetl listę dostępnych produktów.
 
 > Sprawdź różnice między produktami Starter i Unlimited.
 
@@ -38,7 +38,7 @@ Możesz sprawdzić również listę opublikowanych API. Można je testować bezp
 #### Zarejestruj się jako developer
 
 - Kliknij link SignUp w Develoepr Portalu (jeżeli jesteś już zalogowany/zalogowana jako administrator, wyloguj się).
-- Uzupełnij wyagane dane
+- Uzupełnij wymagane dane
 - Sprawdź wiadomość dotyczącą aktywacji konta w swojej skrzynce email. Wykonaj aktywację.
 - Zaloguj się jako developer
 
@@ -79,7 +79,7 @@ Wejdź na listę produktów, wybierz Starter a następnie listę przypisanych do
 
 ### Dostosowywanie Portalu Developera
 
-#### Site Configuration
+#### Wygląd Portalu
 
 Developer Portal bazuje na Paperbits Web framework <https://paperbits.io/>, przy czym jest wzbogacony o dodatkowe funkcje specyficzne dla Azure API Management. Rozszerzony kod Portalu Developera można znaleźć tutaj: <https://github.com/Azure/api-management-developer-portal>.
 
@@ -105,11 +105,11 @@ Szablony powiadomień mailowych można modyfikować z poziomu Portalu Azure. Do 
 
 ![Notification Edit](Images/APIMNotificationEdit.png)
 
-### Product Management
+### Zarządzanie prouktami
 
 Produkty zawierają jedno lub kilka różnych API jak rownież skonfigurowane limity na liczbę wywołań. Do produktu można również skonfigurować "Warunki używania serwisu". W ramach konfiguracji mamy możliwość określenia sposobu aktywacji subskrypcji oraz widoczności dla poszczególnych grup developerów.
 
-#### Product definition
+#### Definicja produktu
 
 W Portalu Azure w usłudze API Management wybierze menu `Products`.
 

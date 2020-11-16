@@ -17,7 +17,7 @@ Tworzenie instancji API Management zajmuje do godziny. Wykonajmy ten krok przed 
 
 ![Deploy blade](Images/APIMDeployBlade.png)
 
-Używając odpowiednich wartości naciśnij **Create** by utworzyć usługę.
+Wprowadź odpowiednie wartości i naciśnij **Create** by utworzyć usługę.
 
 - Nazwa instancji musi być unikalna.
 - Na potrzeby warsztatu używamy Developer Tier.
@@ -26,7 +26,7 @@ Używając odpowiednich wartości naciśnij **Create** by utworzyć usługę.
 
 Po utworzeniu usługi uzyskasz dostęp do nastepujących elementów:
 
-- Portal administracyjny/publikacyjcny - (obecnie dostępny w Azure Management Portal - stary Publisher Portal nie jest już dostępny)
+- Portal administracyjny/publikacyjny - (obecnie dostępny w Azure Management Portal - stary Publisher Portal nie jest już używany)
 - Portal Developera
 - Brama API hostowana w Azure
 

@@ -106,7 +106,7 @@ Named Values (tzw. Properties) to kolekcja par klucz/wartość dostępna dla ins
 
 #### Usuwanie nagłówków
 
-Dość często pojawia sie potrzeba usuwania nagłówków w celu zwiekszenia bezpieczeństwa rozwiązania.
+Dość często pojawia sie potrzeba usuwania nagłówków w celu zwiększenia bezpieczeństwa rozwiązania.
 
 - Otwórz 'Code View' dla Calculator API
 - Dodaj usuwanie nagłówków w sekcji `Outbound'
@@ -118,10 +118,10 @@ Dość często pojawia sie potrzeba usuwania nagłówków w celu zwiekszenia bez
 <set-header name="x-powered-by" exists-action="delete" />
 ```
 
-Before:
+Przed:
 ![Before](Images/APIMResponseDeleteHeaders.png)
 
-After policy applied:
+Po:
 ![After](Images/APIMResponseDeleteHeaders2.png)
 
 #### Warunki
@@ -186,7 +186,7 @@ Dla subskrypcji Unlimited:
 
 #### Mockowanie
 
-Mocking provides a way to return sample responses even when the backend is not available. This enables app developers to not be help up if the backend is under development.
+Mockowanie umożliwia zwracanie przykładowych odpowiedzi z API w momencie gdy samo APi nie jest jeszcze gotowe
 
 - Otwórz Star Wars API i kliknij [Add Operation]
 - Dodaj nową metodę `GetFilm`

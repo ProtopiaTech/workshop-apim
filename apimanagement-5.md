@@ -13,7 +13,7 @@
 
 Przy pomocy wersjonowania i rewizji w łatwy sposób można zarządzać cyklem życia API. [https://azure.microsoft.com/en-us/blog/versions-revisions/](https://azure.microsoft.com/en-us/blog/versions-revisions/)
 
-Rewizje pozwalają wykonywać drobne zmiany w API, które nie zmieniają funcjonalności (non-breaking). Przy pomocy rewizji można niezauważalnie podmieniać zmiany i cofać do poprzedniego stanu. Jednocześnie wydanie rewizi i jej opublikowanie może zostać oznaczine w `Change log` dla API.
+Rewizje pozwalają wykonywać drobne zmiany w API, które nie zmieniają funcjonalności (non-breaking). Przy pomocy rewizji można niezauważalnie podmieniać zmiany i cofać do poprzedniego stanu. Dodatkowo, wydanie rewizi i jej opublikowanie może zostać oznaczone w `Change log` dla API.
 
 ### Rewizje
 
@@ -33,8 +33,8 @@ Rewizje pozwalają wykonywać drobne zmiany w API, które nie zmieniają funcjon
 
 #### Przetestuj rewizję
 
-- Użyj zakładki `Test` do przetestowaia nowej wersji `GetPeople`
-- Zauważ, że numer rewizji (innej niż domyślna) jest dokłądany na końcu URL.
+- Użyj zakładki `Test` do przetestowania nowej wersji `GetPeople`
+- Zauważ, że numer rewizji (innej niż domyślna) jest dokładany na końcu URL.
 
 ![Revisions](Images/APIMRevisionsTest.png)
 
@@ -55,7 +55,7 @@ Adres żądania powinien wyglądać w następujący sposób: `https://<your-apim
 - Dodaj nową wersję
   - Ustaw nazwę na `v2`
   - Użyj wersjonowania po ścieżce
-  - Skonfihuruj produkty `Starter` oraz `Unlimited`
+  - Skonfiguruj produkty `Starter` oraz `Unlimited`
 
 ![Revisions](Images/APIMVersionsAdd.png)
 ![Revisions](Images/APIMVersionsCreate.png)

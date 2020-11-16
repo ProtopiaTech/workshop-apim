@@ -11,11 +11,11 @@
 
 ## Developer Portal
 
-Developer Portal jest miejscem gdzie użytkownicy API mogą się zarejestrować, wyszukać interesujące ich API, a następnie zapoznać się z dokumentacją, poprosić o dostęp i przetetsować działanie API. Zawartość Developer Portalu generowana jest automatycznie w oparciu o ostawienia wykonane w Publicher Portalu (czyli w Portalu Azure). Link do Twojego Developer Portalu to: https://{twoja-instancja-api}.developer.azure-api.net
+Developer Portal jest miejscem gdzie użytkownicy API mogą się zarejestrować, wyszukać interesujące ich API, a następnie zapoznać się z dokumentacją, poprosić o dostęp i przetetsować działanie API. Zawartość Developer Portalu generowana jest automatycznie w oparciu o ostawienia wykonane w Publisher Portalu (czyli w Portalu Azure). Link do Twojego Developer Portalu to: https://{twoja-instancja-api}.developer.azure-api.net
 
 Wejście do Developer Portalu poprzez link na Portalu Azure umożliwia dostosowanie jego zawartości w trybie administratora.
 
-Uruchomienie Portalu Developera wykonywane jest z poziomu Portalu Azure (zakładka Portal overwiew). Wchodząc po raz pierwszy i każdorazowo po wprowadzeniu zmian używamy menu `Operations` oraz `Publish Website`. Spowodouje to opublikowanie zmian w portalu i udostępnienie ich użytkownikom.
+Pierwsze uruchomienie Portalu Developera wykonywane jest z poziomu Portalu Azure (zakładka Portal overview). Wchodząc po raz pierwszy i każdorazowo po wprowadzeniu zmian używamy menu `Operations` oraz `Publish Website`. Spowoduje to opublikowanie zmian w portalu i udostępnienie ich użytkownikom.
 
 ![Developer Portal](Images/APIMDeveloperPortal.png)
 
@@ -31,7 +31,7 @@ Jako niezalogowany użytkownik (otworzenie adresu twojego Developer Portalu w pr
 
 ![Products](Images/APIMDevPortalProducts.png)
 
-Możesz sprawdzić również listę opublikowanych API. Można je testować bezpośrednio z poziomu Developer Portalu. Do tego będzie jednak potrzebne poprawne skonfigurowanie CORS z poziomu Portalu Azure (zakładka Portal overwiew).
+Możesz sprawdzić również listę opublikowanych API. Można je testować bezpośrednio z poziomu Developer Portalu. Do tego będzie jednak potrzebne poprawne skonfigurowanie CORS z poziomu Portalu Azure (zakładka Portal overview).
 
 ![APIs](Images/APIMDevPortalAPIs.png)
 
@@ -44,11 +44,11 @@ Możesz sprawdzić również listę opublikowanych API. Można je testować bezp
 
 ![SignIn](Images/APIMDevSignin.png)
 
-Wybierze "Starter Product" i aktywuj subskrypcję "Starter".
+Wybierz "Starter Product" i aktywuj subskrypcję "Starter".
 
 - Sprawdź email - subskrypcja została automatycznie aktywowana i został do niej przydzielony klucz.
 
-Wybierze "Unlimited Product" i aktywuj subskrypcję "Unlimited".
+Wybierz "Unlimited Product" i aktywuj subskrypcję "Unlimited".
 
 - Sprawdź email - ta subskrypcja wymaga aktywacji.
 
@@ -62,8 +62,8 @@ Na swoim profilu użytkownika sprawdź aktywne subskrypcje
 
 Możesz aktywować subskrypcję na dwa sposoby:
 
-- Wybierając w Portalu Azure `Users` następnie developera i dalej `Subcriptions`. Menu kontektowe po prawej stronie i aktywacja.
-- Wybierając w Portalu Azure `Products` następnie `Unlimited` i dalej `Subcriptions`. Menu kontektowe po prawej stronie i aktywacja.
+- Wybierając w Portalu Azure `Users` następnie developera i dalej `Subcriptions`. Menu kontekstowe po prawej stronie i aktywacja.
+- Wybierając w Portalu Azure `Products` następnie `Unlimited` i dalej `Subcriptions`. Menu kontekstowe po prawej stronie i aktywacja.
 
 #### Testowe wywołanie API
 

@@ -13,11 +13,11 @@
 
 ### JSON Web Tokens (JWT)
 
-JSON Web Tokens JWT to standard przesyłania danych (claimów) w bezpieczny i podpisany (JWS) i/lub zaszyfrowany sposób (JWE) pomiędzmy dwoma stronami API.
+JSON Web Tokens JWT to standard przesyłania danych (claimów) w bezpieczny i podpisany (JWS) i/lub zaszyfrowany sposób (JWE) pomiędzy dwoma stronami API.
 
 - W czasie tego lab będziemy używać następujących stron:
   - <https://jwt.io/> do tworzenia i podpisywania JWT
-    - W tym celu musimy wyznavzyć wspólny klcz, np: 123412341234123412341234
+    - W tym celu musimy wyznaczyć wspólny klucz, np: 123412341234123412341234
   - <https://www.unixtimestamp.com/index.php>
     - Do tworzenia timestampów w formacie epoch np: 01/01/2020 = 1577836800
 
@@ -27,7 +27,7 @@ JSON Web Tokens JWT to standard przesyłania danych (claimów) w bezpieczny i po
 
 - Otwórz Calculator API i wejdź w 'Code View'
 - W 'Inbound' processing dodaj politykę walidacji JWT
-- Przykład zawiera również użycie i definiowanie zmiennych w wyrażeniu. Jest to przydatne kiedy zmienna uzywana jest w wielu miejscach.
+- Przykład zawiera również użycie i definiowanie zmiennych w wyrażeniu. Jest to przydatne kiedy zmienna używana jest w wielu miejscach.
 
 ```xml
 <!-- Inbound -->

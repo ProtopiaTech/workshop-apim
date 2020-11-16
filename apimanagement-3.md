@@ -11,7 +11,7 @@
 
 ## API Management
 
-Każde API dodane do API Management może być nastepnie dodane do produktu i opublikowane na Developer Portalu. Od tego momentu developerzy będą w stanie je testować i uzywać zgodnie z opisanymi przez nas politykami.
+Każde API dodane do API Management może być nastepnie dodane do produktu i opublikowane na Developer Portalu. Od tego momentu developerzy będą w stanie je testować i używać zgodnie z opisanymi przez nas politykami.
 
 ### Zakładka APIs
 
@@ -23,7 +23,7 @@ W Azure Portalu wybierze z menu zakładkę `APIs`. Zobaczysz listę skonfigurowa
 
 ### Ręczne dodanie API bez kontraktu
 
-Zamiast implementwać własne API uzyjemy gotowego `Star Wars API` <https://swapi.dev>.
+Zamiast implementwać własne API użyjemy gotowego `Star Wars API` <https://swapi.dev>.
 
 - Kliknij `Add API`
   - Wybierz `Add Blank API`
@@ -36,7 +36,7 @@ Zamiast implementwać własne API uzyjemy gotowego `Star Wars API` <https://swap
 
 ![Blank](Images/APIMAddBlankAPI.png)
 
-Po utworzeniu wybierz z listy [Start Wars API]
+Po utworzeniu wybierz z listy `Start Wars API`
 
 ![Add](Images/APIMAddStarWars.png)
 

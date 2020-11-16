@@ -32,7 +32,7 @@ Azure API Management umożliwia integrację z usługą Azure Application Insight
 3. Wypełnij potrzebne dane, wpisz **General** w polu **Application Type**.
 4. Kliknij **Create**.
 
-### Podłącz Application Insights z Azure API Management
+### Podłącz Application Insights do Azure API Management
 
 1. Wejdź do swojej instancji API Management w Portalu Azure.
 2. Wybierze **Application Insights** z menu po lewej stronie.
@@ -52,7 +52,7 @@ Azure API Management umożliwia integrację z usługą Azure Application Insight
    ![App Insights logger](Images/apim-app-insights-api-1.png)
 5. Zaznacz checkbox **Enable**.
 6. Wybierz skonfigurowany wcześniej logger w polu **Destination**.
-7. Wybierz **100%** samplowaniai zaznacz **Always log errors**.
+7. Wybierz **100%** samplowania i zaznacz **Always log errors**.
 8. Kliknij **Save**.
 
 ### Dane wysyłane do Application Insights
@@ -65,8 +65,8 @@ Dane otrzymywane przez Azure Application Insights:
 
 Do nieudanego żądania zaliczane są:
 
-- Połączenie zakmniete po stronie klienta
-- Przetwarzanie żądania spododowało błąd (odpaliła się sekcja on-error)
+- Połączenie zakmnięte po stronie klienta
+- Przetwarzanie żądania które spododowało błąd (odpaliła się sekcja on-error)
 - API odpowiedziało kodem błędu 4xx lub 5xx.
 
 Po kilku sekundach do Application Insights powinny zaczać spływać pierwsze metryki.

@@ -14,11 +14,6 @@ Spis treści:
 - [Lab 6 - Monitorowanie usługi](apimanagement-6.md)
 - [Lab 7 - Aspekty bezpieczeństwa](apimanagement-7.md)
 
-Tematy dodatkowe
-
-- [Implementacja API ColorWeb/ColorAPI](apimanagement-A.md)
-- [Self-hosted Gateway](apimanagement-C.md)
-
 Prezentacja
 
 - [Prezentacja](/slides/APIM.pptx)

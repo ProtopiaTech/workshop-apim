@@ -8,3 +8,7 @@
 - [Lab 5 - Wersjonowanie, rewizje](apimanagement-5.md)
 - [Lab 6 - Monitorowanie usługi](apimanagement-6.md)
 - [Lab 7 - Aspekty bezpieczeństwa](apimanagement-7.md)
+
+---
+
+[Home](README.md) | [Lab 6 - Monitorowanie usługi](apimanagement-6.md)

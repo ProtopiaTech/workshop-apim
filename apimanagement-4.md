@@ -222,4 +222,4 @@ Mocking provides a way to return sample responses even when the backend is not a
 
 ---
 
-[Home](README.md) | [Lab 4 - Konfiguracja API](apimanagement-3.md) | [Lab 5 - Wersjonowanie, rewizje](apimanagement-5.md)
+[Home](README.md) | [Lab 3 - Konfiguracja API](apimanagement-3.md) | [Lab 5 - Wersjonowanie, rewizje](apimanagement-5.md)

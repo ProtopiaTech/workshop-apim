@@ -68,3 +68,7 @@ Adres żądania powinien wyglądać w następujący sposób: `https://<your-apim
 - Przetestuj metodę `GetPeople`
 
 ![Revisions](Images/APIMVersionsDevPortal.png)
+
+---
+
+[Home](README.md) | [Lab 4 - Wyrażenia polityk API](apimanagement-4.md) | [Lab 6 - Monitorowanie usługi](apimanagement-6.md)

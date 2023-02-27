@@ -111,6 +111,70 @@ Sprawdzanie claim adminx:
 ![Claim in header](Images/APIMHeaderJWTClaimBackend.png)
 ![Claim in trace](Images/APIMTraceJWTClaimBackend.png)
 
+## Managed Service Identity
+
+W Azure tożsamość z Active Directory może być przypisana automatycznie do zarządzanych zasobów, takich jak  Azure Function, App Service, jak też do instancji API Management. Tak przypisana tożsaność może być następnie używana przez usługę do automatycznego, bezhasłowego uwierzytelniania się do innych usług wspierających taki tryb weryfikacji tożsamości, podobnie jak w przypadku SPN (kont technicznych).
+
+#### Włączenie MSI dla usługi API Management
+
+![MSI dla APIM](Images/apim-security-register-principal.png)
+
+#### Stworzenie KeyVault
+
+- Stwórz usługę KeyVault w portalu Azure
+- Dodaj [secret](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault) do Key Vault.
+  - Nazwa:`favoritePerson`
+  - Wartość: `3`
+
+![Tworzenie Key Vault](Images/apim-security-create-key-vault.png)
+
+#### Key Vault - Stworzenie polityki dostępu
+
+Tworzenie polityki
+
+![Create Key Vault](Images/apim-security-key-vault-1.jpg)
+
+Wybierz operację GET z lsty
+
+![Create Key Vault](Images/apim-security-key-vault-2.jpg)
+
+Wyszukaj nazwy swojego API Management na liście
+
+![Create Key Vault](Images/apim-security-key-vault-3.jpg)
+
+![Create Key Vault](Images/apim-security-key-vault-4.jpg)
+
+Pamietaj o guziku **Save**
+
+![Stwórz Key Vault](Images/apim-security-key-vault-5.jpg)
+
+#### API Management, Key Vault oraz Managed Service Identity
+
+- Dodaj nową operację do Star Wars API
+- Zaktualizuj politykę nowej operacji
+
+![Nowa operacja](Images/apim-security-add-operation.png)
+
+```xml
+<!-- Inbound -->
+<base />
+<send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
+    <set-url>https://{your-keyvault-base-uri}.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
+    <set-method>GET</set-method>
+    <authentication-managed-identity resource="https://vault.azure.net" />
+</send-request>
+<set-variable name="favoritePersonRequest" value="@{
+    var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
+    return "/people/" + secret["value"].ToString() + "/";
+}" />
+<rewrite-uri template="@((string)context.Variables["favoritePersonRequest"])" />
+```
+
+#### Test działania
+
+- Wykonaj test przy pomocy portalu Azure, Portalu Developera, curl lub Postmana
+- Zwróć uwagę, by URL miał następujący format: `https://{your-apim-instance}.azure-api.net/sw/favorite
+
 ---
 
 [Home](README.md) | [Lab 6 - Monitorowanie usługi](apimanagement-6.md)

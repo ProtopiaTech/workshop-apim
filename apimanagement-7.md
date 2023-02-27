@@ -177,4 +177,4 @@ Pamietaj o guziku **Save**
 
 ---
 
-[Home](README.md) | [Lab 6 - Monitorowanie usługi](apimanagement-6.md)
+[Home](README.md) | [Lab 6 - Monitorowanie usługi](apimanagement-6.md) | [Lab 8 - Self-hosted Gateway](apimanagement-8.md)

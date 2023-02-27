@@ -18,6 +18,6 @@ Prezentacja
 
 - [Prezentacja](/slides/APIM.pptx)
 
-Aktualizacja: 16 listopada 2020
+Aktualizacja: 27 lutego 2023
 
 ---

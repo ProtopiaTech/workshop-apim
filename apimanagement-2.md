@@ -8,6 +8,8 @@
 - [Lab 5 - Wersjonowanie, rewizje](apimanagement-5.md)
 - [Lab 6 - Monitorowanie usługi](apimanagement-6.md)
 - [Lab 7 - Aspekty bezpieczeństwa](apimanagement-7.md)
+- [Lab 8 - Self-hosted gateway](apimanagement-8.md)
+- [Lab 9 - FusionDev](apimanagement-9.md)
 
 ## Developer Portal
 

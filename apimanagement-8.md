@@ -13,95 +13,90 @@
 
 ## Self-hosted gateway
 
-With the API Management self-hosted gateway, organisations have the ability to deploy an instance of the APIM gateway component to the environments where they host their applications and/or APIs - for example, in an on-premise data center.
+Przy pomocy API Management self-hosted gateway firmy są w stanie wdrożyć usługę w wersji hybrydowej. W takim modelu brama API, przez którą przetwarzane są żądania może być hostowana w lokalnej serwerowni lub chmurze innego dostawcy.
 
-The self-hosted gateways are hosted in a Docker or Kuberenetes environment, and are managed from the API Management service they are connected to.
+Self-hosted gateways uruchamiana jest jako kontener w Docker lub w Kuberenetes. Brama następnie łączy się do chmurowej instancji API Management w celu pobrania danych konfiguracyjnych.
 
-This part of the lab assumes that the user has Docker Desktop installed.  Installation instructions are [here](https://docs.docker.com/docker-for-windows/install/)
+Lab zakłąda, że na komputerach uczestników zainstalowany jest Docker Desktop. Instrukcje dotyczące instalacji można znaleźć [tutaj](https://docs.docker.com/docker-for-windows/install/)
 
-There are two terms to become familiar with:
+Warto zwrócić uwagę na dwa pojęcia:
 
-- Gateway Deployment ... this is a set of APIM configuration details that will be used by the Gateway Node(s)
-- Gateway Node ... this is a running instance of a APIM gateway proxy i.e. a containerised instance of the gateway
+- Gateway Deployment ... konfiguracja w usłudze API Management dotycząca zbioru Gateway Node(s)
+- Gateway Node ... uruchomiona instancja (kontener) z bramą.
 
-There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gateway Deployments are chargeable - the Gateway Nodes are free i.e. an organization pays for the management control plane, but the compute is free (you are running on the organizations own hardware)
+Istnieje możliwość uruchomienia wielu Gateway Deployment, jak też wielu Gateway Node w ramach jednego API Management Premium. W przypadku wersji Developer obie wartości wynoszą 1.  W wersji premium każde Gateway Deployments podlega dodatkowym kosztom, natomiast uruchomione w nich instancje Gateway Nodes są bezpłatne. To klient zapewnia niezbędne zasoby obliczeniowe (CPU/Ram) potrzebne do ich uruchomienia.
 
 
-## Deploy the Self-hosted Gateway
+## Wdrożenie Self-hosted Gateway
 
-To deploy a self-hosted gateway:
+W celu utworzenia Gateway Deployment:
 
-- Select the `Gateways` option from the menu
-- Select `+ Add`
+- Wybierz opcję `Gateways` z menu w API Management
+- Wybierz `+ Add`
 
 
 ![1](Images/apim-app-gateway-deploy-1.png)
 
-- Enter a Name and Location for the Gateway
-- Select the required APIs from those that are configured in the APIM instance
-  - Our lab will use the Colors API - this was configured in an earlier module
-- Select the `Add` button
+- Wpisz nazwę i lokalizację
+- Wybierz API dostępne w ramach bramy
+  - Na potrzeby LAB wybierz Colors API
+- Naciśnij przycisk `Add`
 
 ![2](Images/apim-app-gateway-deploy-2.png)
 
-The added gateway will appear in the list ... this is the Gateway Deployment.
+Brama powinna po chwili pojawić się na liście, to właśnie wspomniany wcześniej Gateway Deployment.
 
 
 ![3](Images/apim-app-gateway-deploy-3.png)
 
-- Click on the gateway in the list - a blade appears allowing further configuration
+- Wejdź w szczegóły bramy, powinny pojawić się dodatkowe opcje konfiguracyjne.
 
 ![4](Images/apim-app-gateway-deploy-4.png)
 
-- Select the `Deployment` option from the menu
-  - There are scripts for deploying on Docker and Kuberenetes ... for this lab, we will be using the Docker option
-- Save the *env.conf* file to your desktop
-- Copy the Docker run command but remove the *-d* parameter ... this is so the logs are displayed to the terminal
+- Wybierz `Deployment` z menu
+  - Zauważ, że dostępne są przykładowe skrypty do wdrożenia w Docker i Kubernetes. Podczas tego Lab uzywamy opcji Docker.
+- Zapisz plik *env.conf* na swoim komputerze.
+- Skopiuj polecenie Dosker, ale usuń parametr *-d*, co sprawi, że logi pojawią się na ekranie konsoli podczas uruchomienia.
 
 ```text
-docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:latest
+docker run -p 80:8080 -p 443:8081 --name NAZWA --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:latest
 ```
 
 ![5](Images/apim-app-gateway-deploy-5.png)
 
-From a command line - elevated to Administrator (needed for Docker commands)
+W lini poleceń z **prawami administratora**:
 
-- Navigate to the location where the *env.conf* is located
-- Run the Docker run command
+- Przejdź do lokalizacji, gdzie został ściagniety plik *env.conf*
+- Uruchom skopiowane polecenie Docker
 
 ![6](Images/apim-app-gateway-deploy-6.png)
 
-The first time this is executed, it will need to pull down the Docker image - and so there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
+Pierwsze uruchomienie powinno potrwać chwilę dłużej, ponieważ ściąga ono obraz Docker z repozytorium. Do czasu opublikowania nowej wersji obrazu przez Microsoft każde kolejne uruchomienie powinno przebiegać znacznie szybciej.
 
 ![7](Images/apim-app-gateway-deploy-7.png)
 
-Once downloaded, the log output from the container will display a Sputnik logo (this was an internal code name) and some diagnostic logs.
+Po ściągnięciu obrazu powinno pojawić się logo Sputnika (wewnętrzna nazwa kodowa rozwiązania w Microsoft) i logi diagnostyczne.
 
 ![8](Images/apim-app-gateway-deploy-8.png)
 
 
 ![9](Images/apim-app-gateway-deploy-9.png)
 
-Note that in the Gateway blade we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
+Zauważ, że w Portalu w API Managment powinna zaktualizować się liczba Gayeway Nodes (instancji) w ramach Twojego Gateway Deployment. Wszystkie zmiany, takie jak dodanie nowego API do bramy, powinny szybko synchronizowac się z instancją.
 
 ![10](Images/apim-app-gateway-deploy-10.png)
 
-## Testing the API
+## Testowanie API
 
-Our Gateway Node is now deployed - and we can test that it works.
-
-- Open Developer portal, go in the Profile page and get API key for Unlimited products
-- Open Notepad - make note of URLs including the key.  For our lab test, the machine name is just *localhost*
+- Skopiuj swój klucz Unlimited (np. z Portalu Dewelopera).
+- Dodaj klucz do poniższego URL. Zauważ też, że nasz Docker działa lokalnie i wykonamy żądanie na LocalHost.
   - https://localhost/colors/random?key=Unlimited-Key
 
 ![t1](Images/apim-app-gateway-test-1.png)
 
-- Use a tool like [Postman](https://www.postman.com/) to test the API ... should see the random color appear in the response and this confirms everything is working properly
-- If tested with a browser, then a warning needs to accepted to proceed - this is because trusted TLS certificates have not been set up
+- Wykonaj test w przeglądarce (uwaga na certyfikat), lub przy pomocy Curl.
 
-![t2](Images/apim-app-gateway-test-2.png)
-
-Diagnostics for the API call will be logged by the container.
+W logach diagnostycznych bramy powinny pojawić się dodatkowe komunikaty.
 
 ![t3](Images/apim-app-gateway-test-3.png)
 

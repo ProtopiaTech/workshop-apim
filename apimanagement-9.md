@@ -21,7 +21,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with Azu
 
 Check API Management -> Developer Portal -> Portal overview to see if CORS has been enabled globally. If it has been enabled, go to All APIs and add https://flow.microsoft.com as an allowed origin. Here's what the Portal overview will look like if CORS has been enabled:
 
-![](../../assets/images/apim-cors-policy-update.png)
+![](Images/apim-cors-policy-update.png)
 
 ### Create a custom connector
 
@@ -29,7 +29,7 @@ From the existing Star Wars API Api in Azure API Management, click the ellipsis 
 
 ![](https://user-images.githubusercontent.com/1610195/134442238-785e77fd-0230-433a-95ab-ac479a1427e6.png)
 
-If you are unable to create a Power Connector from Azure API Management, you can also export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within Power Platform. You can find a sample [here](https://github.com/Azure/apim-lab/blob/updates/fusion-lab-update-testing/apim-lab/9-fusiondev/Star%20Wars%20API.swagger.json).
+If you are unable to create a Power Connector from Azure API Management, you can also export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within Power Platform. You can find a sample [here](slides/Star%20Wars%20API.swagger.json).
 
 ### View your custom connector in Power Platform
 
@@ -59,7 +59,7 @@ Repeat this import for the `getpeoplebyid` action.
 
 ### Connect to the backing data source
 
-1. Download the [**FanClubMembers.xlsx workbook**](../../assets/excel/FanClubMembers.xlsx) and save it to your OneDrive for Business account.
+1. Download the [**FanClubMembers.xlsx workbook**](slides/FanClubMembers.xlsx) and save it to your OneDrive for Business account.
 2. Back in the Power Apps Editor, in the left pane, select **Home**.
 3. Under **Start from data** , select **Other data sources** and then select **New** from the left pane.
 4. Select **OneDrive for Business** data source, and then **Phone layout**.
@@ -124,3 +124,8 @@ ClearCollect(characterCollection, StarWarsAPI.getpeople({search: ThisItem.Member
 <img width="478" alt="" src="https://user-images.githubusercontent.com/1610195/134442760-d910f2e5-905a-45df-8c6d-2cf25665dfd1.png">
 
 <img width="462" alt="" src="https://user-images.githubusercontent.com/1610195/134442768-42f65239-86a3-4a37-a1e5-0e66a3742efd.png">
+
+
+---
+
+[Home](README.md) | [Lab 8 - Self-hosted gateway](apimanagement-8.md)

@@ -105,4 +105,6 @@ Diagnostics for the API call will be logged by the container.
 
 ![](../../assets/images/apim-app-gateway-test-3.png)
 
+---
 
+[Home](README.md) | [Lab 7 - Aspekty bezpieczeństwa](apimanagement-7.md) | [Lab 9 - FusionDev](apimanagement-9.md)

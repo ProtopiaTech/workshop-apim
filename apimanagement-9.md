@@ -1,9 +1,15 @@
----
-title: Powerapp + Azure Apim API
-parent: Fusion Dev
-has_children: false
-nav_order: 1
----
+# Azure API Management - Warsztat zapoznawczy - Lab 9
+
+- [Spis treści](README.md)
+- [Lab 1 - Utworzenie instancji API Management](apimanagement-1.md)
+- [Lab 2 - Portal dewelopera i tworzenie produktów](apimanagement-2.md)
+- [Lab 3 - Konfiguracja API](apimanagement-3.md)
+- [Lab 4 - Wyrażenia polityk API](apimanagement-4.md)
+- [Lab 5 - Wersjonowanie, rewizje](apimanagement-5.md)
+- [Lab 6 - Monitorowanie usługi](apimanagement-6.md)
+- [Lab 7 - Aspekty bezpieczeństwa](apimanagement-7.md)
+- [Lab 8 - Self-hosted gateway](apimanagement-8.md)
+- [Lab 9 - FusionDev](apimanagement-9.md)
 
 The *premier* Star Wars Fan club is growing and the club officers would like to upgrade from their existing member tracking worksheet to a mobile application that would be available to their members all over the world. The members would also like to see information about their favorite Star Wars movies and characters in the application that would update as new shows and movies are released.
 
